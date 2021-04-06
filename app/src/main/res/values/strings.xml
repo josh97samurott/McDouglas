@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppMcDouglas</string>
+
+    <!-- Inicio de sesión -->
+    <string name="login_user">User</string>
+    <string name="login_password">Password</string>
+    <string name="login_register">Create an account</string>
+    <string name="login_forgotpassword">Forgot Password?</string>
+    <string name="login">Log In</string>
+    <string name="login_google">Log In with Google</string>
+
+</resources>

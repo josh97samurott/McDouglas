@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "577749480703",
+    "firebase_url": "https://appmcdouglas-default-rtdb.firebaseio.com",
+    "project_id": "appmcdouglas",
+    "storage_bucket": "appmcdouglas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577749480703:android:a3e153d50a285ff00508ca",
+        "android_client_info": {
+          "package_name": "app.modules.appmcdouglas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577749480703-1u847emnpqoskgplcei98nhn5835utdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM_khQVa7AN7oyP0wEDoMbYOK6dS-cD1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577749480703-1u847emnpqoskgplcei98nhn5835utdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

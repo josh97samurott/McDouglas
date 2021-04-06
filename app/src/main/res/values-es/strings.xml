@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppMcDouglas</string>
+
+    <!-- Inicio de sesión -->
+    <string name="login_user">Usuario</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_register">Crear una cuenta</string>
+    <string name="login_forgotpassword">¿Olvido su contraseña?</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="login_google">Iniciar sesión con Google</string>
+
+</resources>
