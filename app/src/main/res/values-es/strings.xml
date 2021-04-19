@@ -9,5 +9,18 @@
     <string name="login_forgotpassword">¿Olvido su contraseña?</string>
     <string name="login">Iniciar Sesión</string>
     <string name="login_google">Iniciar sesión con Google</string>
+    <string name="login_failed">Usuario o contraseña erroneos</string>
+    <string name="login_succesfull">Acceso concedido</string>
+
+    <!-- Registro de cuenta -->
+    <string name="register_button">Registrar cuenta</string>
+    <string name="register_login">Ir a inicio de sesión</string>
+    <string name="register_email">Ingrese correo eléctronico</string>
+    <string name="register_password">Ingrese la contraseña</string>
+    <string name="register_name">Ingrese su nombre</string>
+    <string name="register_lastname">Ingrese su apellido</string>
+    <string name="register_phone">Ingrese su telefono</string>
+    <string name="register_status_ok">Cuenta registrada satisfactoriamente</string>
+    <string name="register_status_failed">No se pudo registrar la cuenta. Por favor intenta de nuevo</string>
 
 </resources>
