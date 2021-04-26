@@ -1,4 +1,4 @@
-package app.modules.appmcdouglas.usermanagement;
+package app.modules.appmcdouglas.models;
 
 public class User {
     private String key;

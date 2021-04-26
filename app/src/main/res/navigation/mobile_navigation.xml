@@ -8,18 +8,18 @@
     <fragment
         android:id="@+id/nav_home"
         android:name="app.modules.appmcdouglas.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/item_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="app.modules.appmcdouglas.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_shoppingcart"
+        android:name="app.modules.appmcdouglas.ui.shoppingcart.ShoppingCartFragment"
+        android:label="@string/item_shoppingcart"
+        tools:layout="@layout/fragment_shoppingcart" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="app.modules.appmcdouglas.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_payment"
+        android:name="app.modules.appmcdouglas.ui.payment.PaymentFragment"
+        android:label="@string/item_payment"
+        tools:layout="@layout/fragment_payment" />
 </navigation>

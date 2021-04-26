@@ -23,4 +23,28 @@
     <string name="register_status_ok">Cuenta registrada satisfactoriamente</string>
     <string name="register_status_failed">No se pudo registrar la cuenta. Por favor intenta de nuevo</string>
 
+    <!-- Menú superior -->
+    <string name="close_session">Cerrar sesión</string>
+
+    <!-- Menú lateral -->
+    <string name="item_home">Menú de comida</string>
+    <string name="item_shoppingcart">Carrito de compras</string>
+    <string name="item_payment">Métodos de pago</string>
+
+
+
+
+
+
+
+
+    <string name="title_activity_mc_douglas">McDouglasActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
 </resources>

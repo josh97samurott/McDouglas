@@ -1,19 +1,20 @@
-package app.modules.appmcdouglas.ui.gallery;
+package app.modules.appmcdouglas.ui.shoppingcart;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class ShoppingCartViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public ShoppingCartViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is shopping cart fragment");
     }
 
     public LiveData<String> getText() {
         return mText;
     }
+
 }
