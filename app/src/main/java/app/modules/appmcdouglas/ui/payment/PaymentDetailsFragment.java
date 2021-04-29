@@ -192,4 +192,9 @@ public class PaymentDetailsFragment extends Fragment {
 
         return root;
     }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
 }
