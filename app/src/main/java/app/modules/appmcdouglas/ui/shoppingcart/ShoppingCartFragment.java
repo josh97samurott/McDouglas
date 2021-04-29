@@ -50,12 +50,14 @@ public class ShoppingCartFragment extends Fragment {
     private List<Food> foodList;
     private List<ShoppingCart> shoppingCartList;
     private Double total;
+    private Double totalToSet;
     private Context context;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         total = 0.00;
+        totalToSet = 0.00;
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Shoppingcart");
@@ -96,6 +98,7 @@ public class ShoppingCartFragment extends Fragment {
                             listShoppingcart.setAdapter(adapterShoppingCart);
                             total = total + Double.parseDouble(food.getPrice());
                             totalShoppingcart.setText("Total: $" + total.toString());
+                            totalToSet = total;
                             num++;
                         }
                         if(num == 0){
@@ -122,7 +125,7 @@ public class ShoppingCartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Bundle datosEnviar = new Bundle();
-                datosEnviar.putDouble("total", total);
+                datosEnviar.putDouble("total", totalToSet);
                 Fragment fragment = new PaymentDetailsFragment();
                 fragment.setArguments(datosEnviar);
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
