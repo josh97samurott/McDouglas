@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AppMcDouglas</string>
+    <string name="app_name">McDouglas comida a domicilio</string>
 
     <!-- Inicio de sesión -->
     <string name="login_user">Usuario</string>
@@ -22,6 +22,7 @@
     <string name="register_phone">Ingrese su telefono</string>
     <string name="register_status_ok">Cuenta registrada satisfactoriamente</string>
     <string name="register_status_failed">No se pudo registrar la cuenta. Por favor intenta de nuevo</string>
+    <string name="register_return_login">Regresar al inicio de sesión</string>
 
     <!-- Menú superior -->
     <string name="close_session">Cerrar sesión</string>
@@ -30,10 +31,51 @@
     <string name="item_home">Menú de comida</string>
     <string name="item_shoppingcart">Carrito de compras</string>
     <string name="item_payment">Métodos de pago</string>
+    <string name="item_user">Información de usuario</string>
 
+    <!-- Vista menu de comida -->
+    <string name="add_to_shoppingcart">Agregar al carrito</string>
+    <string name="success_add_to_shoppingcart">Su producto se agrego al carrito</string>
 
+    <!-- Vista del carrito de compras -->
+    <string name="del_to_shoppingcart">Retirar del carrito</string>
+    <string name="success_del_to_shoppingcart">Su producto fue retirado del carrito</string>
+    <string name="total_shopping">Total: </string>
+    <string name="shopping_button">Realizar compra</string>
 
+    <!--Campos de tarjeta de crédito -->
+    <string name="payment_detail_title">Proceso de compra</string>
+    <string name="payment_detail_title2">Método de pagos</string>
+    <string name="payment_detail_total">Total a comprar: </string>
+    <string name="payment_detail_info">Completa la siguiente información para proseguir con la compra.</string>
+    <string name="payment_detail_info2">Complete la siguiente información con sus datos de pago.</string>
+    <string name="payment_num_card">Número de tarjeta</string>
+    <string name="payment_date_card">Fecha de vencimiento</string>
+    <string name="payment_name_card">Titular de la tarjeta</string>
+    <string name="payment_code_card">Código de la tarjeta</string>
+    <string name="payment_address_card">Dirección donde se entregará el pedido</string>
+    <string name="payment_detail_button">Realizar compra</string>
+    <string name="payment_button">Guardar datos</string>
+    <string name="payment_danger_num">¡Número de tarjeta invalido!</string>
+    <string name="payment_danger_date">¡Fecha invalida!</string>
+    <string name="payment_danger_code">¡Código de seguridad invalido!</string>
+    <string name="payment_danger_address">¡Dirección de entrega invalida!</string>
+    <string name="payment_danger_name">¡Titular de tarjeta invalido!</string>
+    <string name="payment_success_purchase">¡Compra realizada!</string>
+    <string name="payment_success_save_data">Datos guardados correctamente</string>
 
+    <!--Campos información de usuario -->
+    <string name="user_title">Información de usuario</string>
+    <string name="user_info">El siguiente formulario le permite modificar su información personal.</string>
+    <string name="user_info2">Llenar los siguientes campos si lo que desea es cambiar su contraseña.</string>
+    <string name="user_email">Correo eléctronico</string>
+    <string name="user_name">Nombre</string>
+    <string name="user_lastname">Apellidos</string>
+    <string name="user_paswword">Ingrese su contrasñea si desea cambiarla</string>
+    <string name="user_change_password">Nueva contraseña</string>
+    <string name="user_confirm_password">Confirmar nueva contraseña</string>
+    <string name="user_phone">Télefono / Celular</string>
+    <string name="user_save_data">Guardar información</string>
 
 
 

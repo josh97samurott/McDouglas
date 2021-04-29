@@ -1,6 +1,7 @@
 package app.modules.appmcdouglas.models;
 
 public class Food {
+    String keyshoppingcart;
     private String key;
     private String name;
     private String category;
@@ -19,6 +20,14 @@ public class Food {
         this.tokenimg = tokenimg;
         this.description = description;
         this.price = price;
+    }
+
+    public String getKeyshoppingcart() {
+        return keyshoppingcart;
+    }
+
+    public void setKeyshoppingcart(String keyshoppingcart) {
+        this.keyshoppingcart = keyshoppingcart;
     }
 
     public String getKey() {

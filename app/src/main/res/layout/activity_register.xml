@@ -31,7 +31,7 @@
         android:layout_margin="20dp"
         android:layout_below="@+id/editEmail"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:hint="@string/register_password" />
 
     <EditText
@@ -85,6 +85,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/orange"
-        android:text="@string/login_register" />
+        android:text="@string/register_return_login" />
 
 </RelativeLayout>

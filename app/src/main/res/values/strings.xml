@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppMcDouglas</string>
+    <string name="app_name">McDouglas food delivery</string>
 
     <!-- Inicio de sesión -->
     <string name="login_user">User</string>
@@ -21,6 +21,7 @@
     <string name="register_phone">Enter your phone</string>
     <string name="register_status_ok">Registration successfull!</string>
     <string name="register_status_failed">Registration failed! Please try again later</string>
+    <string name="register_return_login">Return to Log In</string>
 
     <!-- Menú superior -->
     <string name="close_session">Log out</string>
@@ -29,11 +30,51 @@
     <string name="item_home">Food menu</string>
     <string name="item_shoppingcart">Shopping cart</string>
     <string name="item_payment">Payment methods</string>
+    <string name="item_user">User information</string>
 
+    <!-- Vista menu de comida -->
+    <string name="add_to_shoppingcart">Add to cart</string>
+    <string name="success_add_to_shoppingcart">Product added to cart successfully</string>
 
+    <!-- Vista del carrito de compras -->
+    <string name="del_to_shoppingcart">Remove item</string>
+    <string name="success_del_to_shoppingcart">Product removed sucessfully</string>
+    <string name="total_shopping">Total: </string>
+    <string name="shopping_button">Make payment</string>
 
+    <!--Campos de tarjeta de crédito -->
+    <string name="payment_detail_title">Purchasing process</string>
+    <string name="payment_detail_title2">Payment methods</string>
+    <string name="payment_detail_total">Total to buy: </string>
+    <string name="payment_detail_info">Complete the following information to proceed with the purchase.</string>
+    <string name="payment_detail_info2">Complete the following information with your payment data.</string>
+    <string name="payment_num_card">card number</string>
+    <string name="payment_date_card">Due date</string>
+    <string name="payment_name_card">Cardholder</string>
+    <string name="payment_code_card">Card code</string>
+    <string name="payment_address_card">Address where the order will be delivered</string>
+    <string name="payment_detail_button">Make purchase</string>
+    <string name="payment_button">Save data</string>
+    <string name="payment_danger_num">Invalid card number!</string>
+    <string name="payment_danger_date">Invalid date!</string>
+    <string name="payment_danger_code">Invalid security code!</string>
+    <string name="payment_danger_address">Invalid delivery address!</string>
+    <string name="payment_danger_name">Invalid card holder!</string>
+    <string name="payment_success_purchase">Payment successfully!</string>
+    <string name="payment_success_save_data">Data saved successfully</string>
 
-
+    <!--Campos información de usuario -->
+    <string name="user_title">User information</string>
+    <string name="user_info">The following form will allow you to modify your personal information.</string>
+    <string name="user_info2">If you want to change your password, fill the following fields.</string>
+    <string name="user_email">Email</string>
+    <string name="user_name">Name</string>
+    <string name="user_lastname">Lastname</string>
+    <string name="user_paswword">If you wannt to change password, please fill this field</string>
+    <string name="user_change_password">New password</string>
+    <string name="user_confirm_password">Confirm new contraseña</string>
+    <string name="user_phone">Phone</string>
+    <string name="user_save_data">Save data</string>
 
 
     <string name="title_activity_mc_douglas">McDouglasActivity</string>
@@ -43,8 +84,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-
-
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

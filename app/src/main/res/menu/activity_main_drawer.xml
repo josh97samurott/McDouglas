@@ -16,5 +16,10 @@
             android:id="@+id/nav_payment"
             android:icon="@drawable/payment"
             android:title="@string/item_payment" />
+
+        <item
+            android:id="@+id/nav_user"
+            android:icon="@drawable/user"
+            android:title="@string/item_user" />
     </group>
 </menu>

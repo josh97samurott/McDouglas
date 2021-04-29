@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_payment_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     android:padding="20dp"
-    tools:context=".ui.payment.PaymentFragment">
+    tools:context=".ui.payment.PaymentDetailsFragment">
 
     <TextView
         android:id="@+id/txtTitle"
         android:gravity="center"
-        android:text="@string/payment_detail_title2"
+        android:text="@string/payment_detail_title"
         android:textSize="26dp"
         android:textColor="@color/red"
         android:textStyle="bold"
@@ -18,10 +20,20 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/txtInfo"
+        android:id="@+id/txtTotal"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/txtTitle"
-        android:text="@string/payment_detail_info2"
+        android:text="@string/payment_detail_total"
+        android:textSize="22dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtInfo"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtTotal"
+        android:text="@string/payment_detail_info"
         android:textSize="18dp"
         android:textColor="@color/black"
         android:layout_width="match_parent"
@@ -99,7 +111,7 @@
         android:ems="10"
         android:textSize="18dp"
         android:hint="@string/payment_code_card"
-        android:inputType="textPassword"
+        android:inputType="number"
         android:text=""
         android:textColor="@color/black" />
 
@@ -139,6 +151,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"
-        android:text="@string/payment_button" />
+        android:text="@string/payment_detail_button" />
 
 </RelativeLayout>

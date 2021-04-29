@@ -64,16 +64,16 @@
         android:textSize="18dp"/>
 
     <Button
-        android:id="@+id/btnAddShopping"
+        android:id="@+id/btnDelShopping"
         android:layout_toRightOf="@+id/imagefood"
         android:layout_below="@+id/pricefood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/add_to_shoppingcart" />
+        android:text="@string/del_to_shoppingcart" />
 
     <View style="@style/Divider"
         android:layout_marginTop="10dp"
-        android:layout_below="@id/btnAddShopping"
+        android:layout_below="@id/btnDelShopping"
         />
 
 </RelativeLayout>

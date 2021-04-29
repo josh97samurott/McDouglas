@@ -1,8 +1,6 @@
-package app.modules.appmcdouglas.ui.home;
+package app.modules.appmcdouglas.ui.shoppingcart;
 
-import android.app.Activity;
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +8,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
@@ -25,21 +20,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 import app.modules.appmcdouglas.R;
 import app.modules.appmcdouglas.models.Food;
 import app.modules.appmcdouglas.models.ShoppingCart;
 
-public class AdapterFood extends ArrayAdapter<Food> {
+public class AdapterShoppingCart extends ArrayAdapter<Food> {
 
     List<Food> listfood;
     private Context context;
 
-    public AdapterFood(@NonNull Context context, @NonNull List<Food> listfood){
-        super(context, R.layout.food_layout, listfood);
+    public AdapterShoppingCart(@NonNull Context context, @NonNull List<Food> listfood){
+        super(context, R.layout.shoppingcart_layout, listfood);
         this.context = context;
         this.listfood = listfood;
     }
@@ -51,13 +44,13 @@ public class AdapterFood extends ArrayAdapter<Food> {
         View rowview = null;
 
         if(view == null){
-            rowview = layoutInflater.inflate(R.layout.food_layout, null);
+            rowview = layoutInflater.inflate(R.layout.shoppingcart_layout, null);
         }
         else{
             rowview = view;
         }
 
-        Button btnAddShoppingCart = rowview.findViewById(R.id.btnAddShopping);
+        Button btnDelShoppingCart = rowview.findViewById(R.id.btnDelShopping);
 
         TextView txtKeyFood = rowview.findViewById(R.id.keyfood);
         TextView txtNameFood = rowview.findViewById(R.id.namefood);
@@ -70,21 +63,22 @@ public class AdapterFood extends ArrayAdapter<Food> {
         txtNameFood.setText(Html.fromHtml(listfood.get(position).getName()));
         txtCategoryFood.setText(Html.fromHtml(listfood.get(position).getCategory()));
         txtDescriptionFood.setText(Html.fromHtml(listfood.get(position).getDescription()));
-        txtPriceFood.setText(Html.fromHtml(listfood.get(position).getPrice()));
+        txtPriceFood.setText(Html.fromHtml("$"+listfood.get(position).getPrice()));
         Picasso.get().load(listfood.get(position).getTokenimg()).into(imageFood);
 
-        btnAddShoppingCart.setOnClickListener(new View.OnClickListener() {
+        btnDelShoppingCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
                 DatabaseReference databaseReference = firebaseDatabase.getReference("Shoppingcart");
                 FirebaseAuth mAuth = FirebaseAuth.getInstance();
                 FirebaseUser user = mAuth.getCurrentUser();
-                ShoppingCart shoppingCart = new ShoppingCart(user.getUid(), listfood.get(position).getKey());
-                databaseReference.push().setValue(shoppingCart);
-                Toast.makeText(getContext(), R.string.success_add_to_shoppingcart, Toast.LENGTH_LONG).show();
+                databaseReference.child(listfood.get(position).getKeyshoppingcart()).removeValue();
+                Toast.makeText(getContext(), R.string.success_del_to_shoppingcart, Toast.LENGTH_LONG).show();
+                listfood.remove(position);
             }
         });
+
 
         return rowview;
     }

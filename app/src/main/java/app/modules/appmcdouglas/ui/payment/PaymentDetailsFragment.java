@@ -1,14 +1,11 @@
 package app.modules.appmcdouglas.ui.payment;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,18 +23,22 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import app.modules.appmcdouglas.R;
 import app.modules.appmcdouglas.models.CreditCart;
-import app.modules.appmcdouglas.ui.home.HomeViewModel;
+import app.modules.appmcdouglas.models.Food;
+import app.modules.appmcdouglas.models.ShoppingCart;
+import app.modules.appmcdouglas.ui.shoppingcart.AdapterShoppingCart;
 
-public class PaymentFragment extends Fragment {
-
+public class PaymentDetailsFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     Query nameOrder;
+    private TextView txtTotal;
     private EditText edtNumCard;
     private EditText edtDateCard;
     private EditText edtNameCard;
@@ -48,15 +49,18 @@ public class PaymentFragment extends Fragment {
     private TextView dangerCode;
     private TextView dangerName;
     private TextView dangerAddress;
-    private Button btnSave;
+    private Button btnSuccessShopping;
     private String key;
 
-
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
         key = "";
-        View root = inflater.inflate(R.layout.fragment_payment, container, false);
+        Bundle data = getArguments();
+        Double total = data.getDouble("total");
+        View root = inflater.inflate(R.layout.fragment_payment_details, container, false);
+        txtTotal = root.findViewById(R.id.txtTotal);
+        txtTotal.setText("Total a comprar: $"+ total.toString());
         edtNumCard = root.findViewById(R.id.edtNumCard);
         edtDateCard = root.findViewById(R.id.edtDateCard);
         edtNameCard = root.findViewById(R.id.edtNameCard);
@@ -95,8 +99,9 @@ public class PaymentFragment extends Fragment {
         });
 
 
-        btnSave = root.findViewById(R.id.btnSuccessShopping);
-        btnSave.setOnClickListener(new View.OnClickListener() {
+
+        btnSuccessShopping = root.findViewById(R.id.btnSuccessShopping);
+        btnSuccessShopping.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String stringToValidate = edtNumCard.getText().toString();
@@ -138,7 +143,26 @@ public class PaymentFragment extends Fragment {
                                         databaseReference.child(key).setValue(creditCart);
                                     }
 
+
+                                    databaseReference = firebaseDatabase.getReference("Shoppingcart");
+                                    nameOrder = databaseReference.orderByChild("keyuser").equalTo(user.getUid());
+                                    nameOrder.addListenerForSingleValueEvent(new ValueEventListener() {
+                                        @Override
+                                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                            for (DataSnapshot data : snapshot.getChildren()){
+                                                data.getRef().removeValue();
+
+                                            }
+                                        }
+                                        @Override
+                                        public void onCancelled(@NonNull DatabaseError error) {
+
+                                        }
+                                    });
+
                                     Toast.makeText(getContext(), R.string.payment_success_purchase, Toast.LENGTH_LONG).show();
+                                    root.findViewById(R.id.fragment_payment_details).setVisibility(View.INVISIBLE);
+                                    getActivity().onBackPressed();
                                 }
                                 else{
                                     dangerAddress.setText(getResources().getString(R.string.payment_danger_address));
@@ -165,8 +189,7 @@ public class PaymentFragment extends Fragment {
             }
         });
 
+
         return root;
     }
-
-
 }
