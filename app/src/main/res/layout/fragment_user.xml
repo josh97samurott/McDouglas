@@ -29,15 +29,15 @@
 
     <EditText
         android:id="@+id/edtEmail"
-        android:layout_below="@+id/txtInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtInfo"
         android:ems="10"
-        android:textSize="18dp"
         android:hint="@string/user_email"
         android:inputType="text"
         android:text=""
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/edtName"
@@ -63,11 +63,23 @@
         android:text=""
         android:textColor="@color/black" />
 
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_below="@+id/edtLastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="18dp"
+        android:hint="@string/user_phone"
+        android:inputType="text"
+        android:text=""
+        android:textColor="@color/black" />
+
 
     <TextView
         android:id="@+id/txtInfo2"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/edtLastname"
+        android:layout_below="@+id/edtPhone"
         android:text="@string/user_info2"
         android:textSize="18dp"
         android:textColor="@color/black"
@@ -87,7 +99,7 @@
         android:ems="10"
         android:textSize="18dp"
         android:hint="@string/user_paswword"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:layout_marginTop="15dp"
         android:text=""
         android:textColor="@color/black" />
@@ -100,7 +112,7 @@
         android:ems="10"
         android:textSize="18dp"
         android:hint="@string/user_change_password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:text=""
         android:textColor="@color/black" />
 
@@ -111,7 +123,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/user_confirm_password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:layout_marginTop="10dp"
         android:text=""
         android:textColor="@color/black" />
@@ -132,7 +144,7 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btnSuccessShopping"
+        android:id="@+id/btnSuccessUser"
         android:layout_below="@+id/txtDangerUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

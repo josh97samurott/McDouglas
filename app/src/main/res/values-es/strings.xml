@@ -77,6 +77,17 @@
     <string name="user_phone">Télefono / Celular</string>
     <string name="user_danger_field">Algún campo del formulario no contiene valor o su valor es invalido.</string>
     <string name="user_save">Guardar información de usuario</string>
+    <string name="user_danger_password_confirm">Las contraseñas no coinciden.</string>
+    <string name="user_danger_password">La contraseña ingresada para el cambio no es correcta.</string>
+    <string name="user_confirm_save">Datos de usuario actualizados</string>
+    <string name="user_confirm_save_password">Contraseña actualizada</string>
+
+    <!--Campos de factura-->
+    <string name="bill_title">Compra realizada</string>
+    <string name="bill_date">Fecha de cancelación: </string>
+    <string name="bill_total">Total cancelado: </string>
+    <string name="bill_rest">Restaurante: Douglas</string>
+    <string name="bill_address">Dirección de entrega: </string>
 
 
 

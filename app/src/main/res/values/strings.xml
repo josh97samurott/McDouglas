@@ -76,6 +76,18 @@
     <string name="user_phone">Phone</string>
     <string name="user_danger_field">Some form field does not contain a value or its value is invalid.</string>
     <string name="user_save">Save user info</string>
+    <string name="user_danger_password_confirm">Passwords do not match.</string>
+    <string name="user_danger_password">The password entered for the change is not correct.</string>
+    <string name="user_confirm_save">Updated user data</string>
+    <string name="user_confirm_save_password">Updated password</string>
+
+
+    <!--Campos de factura-->
+    <string name="bill_title">Purchase made</string>
+    <string name="bill_date">Cancellation date: </string>
+    <string name="bill_total">Total canceled: </string>
+    <string name="bill_rest">Restaurant: McDouglas</string>
+    <string name="bill_address">Delivery address: </string>
 
 
     <string name="title_activity_mc_douglas">McDouglasActivity</string>
@@ -85,4 +97,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
