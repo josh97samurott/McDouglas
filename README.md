@@ -1,5 +1,5 @@
 # McDouglas
-# Integrantes
+#                  Integrantes
 # Josué Samuel Rodríguez Tobías		RT142164   GT03
 # Wilmer Alfredo Flores Melchor		FM181616   GT03
 # Joshua Caleb Reyes Rosa			    RR152122   GT03
