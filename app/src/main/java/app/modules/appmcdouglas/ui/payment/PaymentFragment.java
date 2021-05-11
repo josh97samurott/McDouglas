@@ -1,8 +1,5 @@
 package app.modules.appmcdouglas.ui.payment;
 
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -30,7 +27,6 @@ import java.util.regex.Pattern;
 
 import app.modules.appmcdouglas.R;
 import app.modules.appmcdouglas.models.CreditCart;
-import app.modules.appmcdouglas.ui.home.HomeViewModel;
 
 public class PaymentFragment extends Fragment {
 

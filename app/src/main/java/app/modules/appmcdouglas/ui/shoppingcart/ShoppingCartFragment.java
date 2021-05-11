@@ -2,8 +2,6 @@ package app.modules.appmcdouglas.ui.shoppingcart;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,9 +32,7 @@ import java.util.List;
 import app.modules.appmcdouglas.R;
 import app.modules.appmcdouglas.models.Food;
 import app.modules.appmcdouglas.models.ShoppingCart;
-import app.modules.appmcdouglas.ui.home.AdapterFood;
 import app.modules.appmcdouglas.ui.payment.PaymentDetailsFragment;
-import app.modules.appmcdouglas.ui.payment.PaymentViewModel;
 
 public class ShoppingCartFragment extends Fragment {
     FirebaseAuth firebaseAuth;

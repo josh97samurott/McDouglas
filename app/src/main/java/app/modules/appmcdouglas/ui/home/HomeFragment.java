@@ -38,7 +38,6 @@ public class HomeFragment extends Fragment {
     Query nameOrder;
     private ListView listFood;
     private List<Food> foods;
-    private HomeViewModel homeViewModel;
     private Context context;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

@@ -15,7 +15,6 @@
             android:name=".McDouglasActivity"
             android:label="@string/title_activity_mc_douglas"
             android:theme="@style/Theme.AppMcDouglas.NoActionBar"></activity>
-        <activity android:name=".usermanagement.ForgotPasswordActivity" />
         <activity android:name=".usermanagement.RegisterActivity" />
         <activity android:name=".usermanagement.LoginActivity" />
         <activity android:name=".MainActivity">
