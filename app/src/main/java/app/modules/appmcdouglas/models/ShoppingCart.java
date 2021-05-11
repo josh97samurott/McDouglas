@@ -1,6 +1,8 @@
 package app.modules.appmcdouglas.models;
 
-public class ShoppingCart {
+import java.io.Serializable;
+
+public class ShoppingCart implements Serializable {
     private String keyuser;
     private String keyfood;
     String key;

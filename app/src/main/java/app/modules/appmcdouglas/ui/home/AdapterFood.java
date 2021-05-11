@@ -70,7 +70,7 @@ public class AdapterFood extends ArrayAdapter<Food> {
         txtNameFood.setText(Html.fromHtml(listfood.get(position).getName()));
         txtCategoryFood.setText(Html.fromHtml(listfood.get(position).getCategory()));
         txtDescriptionFood.setText(Html.fromHtml(listfood.get(position).getDescription()));
-        txtPriceFood.setText(Html.fromHtml(listfood.get(position).getPrice()));
+        txtPriceFood.setText(Html.fromHtml("$"+listfood.get(position).getPrice()));
         Picasso.get().load(listfood.get(position).getTokenimg()).into(imageFood);
 
         btnAddShoppingCart.setOnClickListener(new View.OnClickListener() {
