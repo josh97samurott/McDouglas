@@ -35,23 +35,14 @@
         android:hint="@string/login_password"
         />
 
-    <TextView
-        android:id="@+id/linkForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18dp"
-        android:textColor="@color/red"
-        android:textStyle="bold"
-        android:layout_below="@+id/editPassword"
-        android:layout_alignRight="@id/editPassword"
-        android:text="@string/login_forgotpassword" />
+
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/linkForgotPassword"
+        android:layout_below="@+id/editPassword"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"

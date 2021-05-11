@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -71,6 +73,7 @@ public class PaymentDetailsFragment extends Fragment {
         dangerCode = root.findViewById(R.id.txtDangerCodeCard);
         dangerName = root.findViewById(R.id.txtDangerNameCard);
         dangerAddress = root.findViewById(R.id.txtDangerAddress);
+
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
@@ -161,8 +164,16 @@ public class PaymentDetailsFragment extends Fragment {
                                     });
 
                                     Toast.makeText(getContext(), R.string.payment_success_purchase, Toast.LENGTH_LONG).show();
+                                    Bundle datosEnviar = new Bundle();
+                                    datosEnviar.putString("total", total.toString());
+                                    Fragment fragment = new BillPaymentFragment();
+                                    fragment.setArguments(datosEnviar);
+                                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                                    fragmentTransaction.replace(R.id.nav_host_fragment, fragment);
+                                    fragmentTransaction.addToBackStack(null);
+                                    fragmentTransaction.commit();
                                     root.findViewById(R.id.fragment_payment_details).setVisibility(View.INVISIBLE);
-                                    getActivity().onBackPressed();
                                 }
                                 else{
                                     dangerAddress.setText(getResources().getString(R.string.payment_danger_address));
