@@ -75,7 +75,8 @@
     <string name="user_change_password">Nueva contraseña</string>
     <string name="user_confirm_password">Confirmar nueva contraseña</string>
     <string name="user_phone">Télefono / Celular</string>
-    <string name="user_save_data">Guardar información</string>
+    <string name="user_danger_field">Algún campo del formulario no contiene valor o su valor es invalido.</string>
+    <string name="user_save">Guardar información de usuario</string>
 
 
 

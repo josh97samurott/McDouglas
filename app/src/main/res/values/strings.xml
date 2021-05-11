@@ -70,11 +70,12 @@
     <string name="user_email">Email</string>
     <string name="user_name">Name</string>
     <string name="user_lastname">Lastname</string>
-    <string name="user_paswword">If you wannt to change password, please fill this field</string>
+    <string name="user_paswword">Old password</string>
     <string name="user_change_password">New password</string>
     <string name="user_confirm_password">Confirm new contraseña</string>
     <string name="user_phone">Phone</string>
-    <string name="user_save_data">Save data</string>
+    <string name="user_danger_field">Some form field does not contain a value or its value is invalid.</string>
+    <string name="user_save">Save user info</string>
 
 
     <string name="title_activity_mc_douglas">McDouglasActivity</string>
@@ -84,6 +85,4 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
