@@ -6,14 +6,7 @@
     android:background="@color/white"
     tools:context=".ui.shoppingcart.ShoppingCartFragment">
 
-    <ListView
-        android:id="@+id/listShoppingCart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
-
     <TextView
-        android:layout_below="@+id/listShoppingCart"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -35,6 +28,13 @@
         android:backgroundTint="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <ListView
+        android:layout_below="@+id/btnShopping"
+        android:id="@+id/listShoppingCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
 
 
 
